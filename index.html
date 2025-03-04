@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume using JS DOM</title>
+    <style>
+        body {
+           
+              margin: 20px;
+            padding: 20px;  
+            background-color: #faf6f6;
+            
+        }
+        .a {
+            
+            background: rgb(251, 250, 250);
+            padding: 20px;
+        }
+        h2{
+            color: rgb(141, 121, 230);
+
+        }
+        h3 {
+            color: #ca0c6b;
+        }
+    </style>
+</head>
+<body>
+    <script>
+         let a = document.createElement("div");
+        a.className = "a";
+
+        function createElement(tag, content, isBold = false) {
+            let element = document.createElement(tag);
+            element.innerHTML = isBold ? `<b>${content}</b>` : content;
+             return element;
+        }
+
+        a.appendChild(createElement("h2", "EDUMYAKALAMAMATHA"));
+        a.appendChild(createElement("p", "CONTACT: 6304243183 <br> mammumamatha478@gmail.com"));
+
+        a.appendChild(createElement("h3", "CAREER OBJECTIVE:"));
+          a.appendChild(createElement("p", "As a recent Post graduate, I am eager to launch my career in the dynamic field of technology and mathematics. I aim to leverage my strong analytical, problem-solving, and programming skills to excel in roles that require a combination of mathematical expertise and computer science knowledge."));
+
+        a.appendChild(createElement("h3", "EDUCATION:"));
+        a.appendChild(createElement("p", "Nizam College, Hyderabad, India", true));
+        a.appendChild(createElement("p", "Master of Computer Applications in 2022-2024 | CGPA: 8.39/10"));
+         a.appendChild(createElement("p", "TSWRDC(W) Korutla, India", true));
+       a.appendChild(createElement("p", "Bachelor of Science in MSTCS in June 2019 - June 2022 | CGPA: 8.0/10"));
+
+        a.appendChild(createElement("h3", "INTERNSHIP:"));
+        a.appendChild(createElement("p", "CodeSoft", true));
+        a.appendChild(createElement("p", "I have completed 4 weeks of internship at CodeSoft Technologies. This internship program includes Java Programming."));
+
+        a.appendChild(createElement("h3", "PROJECTS:"));
+        a.appendChild(createElement("p", "Build a basic User Login Form using HTML, CSS."));
+        a.appendChild(createElement("p", "Driver Drowsiness Monitoring System using Virtual Behaviour and Machine Learning."));
+
+        a.appendChild(createElement("h3", "TECHNICAL SKILLS:"));
+        a.appendChild(createElement("p", "Programming Languages: Basics of C, CPP"));
+        a.appendChild(createElement("p", "Front End: HTML, CSS"));
+        a.appendChild(createElement("p", "Operating System: Windows"));
+        a.appendChild(createElement("p", "Tools: Visual Studio Code"));
+
+        a.appendChild(createElement("h3", "CERTIFICATIONS:"));
+        a.appendChild(createElement("p", "Statistics for Financial Domain from TSWRDC."));
+        a.appendChild(createElement("p", "Dynamic Webpage Design using PHP from TSWRDC."));
+
+        a.appendChild(createElement("h3", "EXTRA CURRICULAR ACTIVITIES:"));
+        a.appendChild(createElement("p", "Co-Originated an event called Project Expo in our college fest."));
+        a.appendChild(createElement("p", "I have been a volunteer in Medical Camp."));
+
+        a.appendChild(createElement("h3", "DECLARATION:"));
+        a.appendChild(createElement("p", "I hereby declare that the above information is true to the best of my knowledge."));
+
+        document.body.appendChild(a);
+    </script>
+</body>
+</html>
